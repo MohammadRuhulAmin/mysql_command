@@ -1,0 +1,150 @@
+<html>
+	<head>
+		<title>My SQL Database Tutorial</title>
+	</head>
+	<body>
+		<h1>My Sql Database Tutorial </h1>
+		<h3>Data Definition Language (DDL)</h3>
+		<ul> 
+			
+			<li>Create </li>
+			<li>Alter </li>
+			<li>Drop </li>
+			<li>Truncate </li>
+		</ul>
+		<h3>Data Manipulation Language(DML)</h3>
+		<ul>
+			<li>Select (DQL)</li>
+			<li>Update </li>
+			<li>Delete </li>
+			<li>insert </li>
+		</ul>
+		<h3>Data Control Language (DCL)</h3>
+		<ul>
+			
+			<li> Grant</li>
+			<li> Revoke</li>  
+		</ul>
+		<h3> Transaction  Control Language </h3>
+		<ul>
+			<li>Commit </li>
+			<li>Rollback</li>
+		</ul>
+		<h1>Sql Datatypes</h1>
+		<h1>######################### Exect Numaric ###################</h1>		<ul>
+			<li>int</li>
+			<li>smallint</li>
+			<li>bit</li>
+			<li>decimal</li>
+		</ul>
+		<h1></h1>
+		<h1>######################### Approximate Numeric ###################</h1>
+		<ul>
+			<li>float</li>
+			<li>real</li>
+		</ul>
+		
+		<h1>######################### Date & Time ###################</h1>
+		<ul>
+			<li>date</li>
+			<li>time</li>
+			<li>timestamp</li>
+		</ul>
+		<h1>######################### String Data Type ###################</h1>
+		<ul>
+			<li>char</li>
+			<li>varchar</li>
+			<li>text</li>
+		</ul>
+		<h1>Binary Datatype</h1>
+		<h1>######################### Binary DataType ###################</h1>
+		<ul>
+			<li>binary</li>
+			<li>varbinary</li>
+			<li>image</li>
+		</ul>
+		<h1>SQL Operators</h1>
+		<h1>######################### SQL Operators ###################</h1>
+		<ul>
+			<li> Arithmatic (+, - , * , / , %) </li>
+			<li>Logic (ALL , AND , ANY , BETWEEN, EXISTS ) </li>
+			<li> = , != , <> , > , < , >= , <= , !< (not less than)  , !> (not greater than)  </li>
+		</ul>
+		
+		<h1>######################### SQL Queries ###################</h1>
+		<ul>
+			<li>show databases;</li>
+			<li>use database_name;</li>
+			<li>show tables;</li>
+			<li>select * from table_name;</li>
+			<li>describe table_name ;(refers the stracture of the table) </li>
+			<li>create database database_name;</li>
+			<li>
+				<ul>
+					<li>create table table_name (col1_name col1_datatype) , col2_name col2_datatype , col3_name col3_datatype </li>
+					<li>Example : create table emp_details(Name varchar(25),Age int ,sex char(10),city varchar(15),salary float);</li>
+				</ul>
+			</li>
+			<li>
+				<ul>
+					<li>insert into table_name values("col_1value","col_2value","col_3value...."),
+						("col_1value","col_2value","col_3value...."),
+						("col_1value","col_2value","col_3value...."),
+						("col_1value","col_2value","col_3value....");
+					</li>
+				</ul>
+			</li>
+			<li> select distinct column_name from table_name;</li>
+			<li> select count(name) as column_name from table_name;  // here count_name will be a column name </li>
+			<li> select sum(column_name) from table_name; </li>
+			<li> select avg(column_name) from table_name; </li>
+			<li>select col_1,col_2,col_3 from table_name;</li>
+			<li>select * from table_name where column column_name > number </li>
+			<li> select col_1, col_2 , col_3 from table_name where col_name = 'someName'</li>
+			<li>select * from table_name where column_name = 'someName' or column_name = 'someName'; orSame=> (select * from table_name where column_name in('someName','someName');) </li>
+			<li>select * from table_name where column_name in('someName','someName');</li>
+			<li>select * from table_name where column_name between 'FromDate' and 'ToDate';</li>
+			<li>select * from table_name where column1_name > number and column2_name = 'someName';</li>
+			<li>select col1_name , sum(col2_name) as summation_of_colName from table_name group by colName ; </li>
+			<li>select * from table_name order by column_name desc</li>
+			<li>select (10+30) as summation </li>
+			<li>length of a string  :: select length('someonesNameOrAnyThing') as total_length_of_string </li>
+			<li>repeat N times something :: select repeat('text',N) </li>
+			<li>select upper('someThing') ; output :: SOMETHING </li>
+			<li>select lower('LOWER') output :: lower </li>
+			<li>select curdate() this will show current date</li>
+			<li>select day(curdate())</li>
+			<li>select now(); Output :: 2021-01-20 15:15:26 </li>
+			<h1>######################### Strings Functions ###################</h1>
+			<li>select upper('Bangladesh') as upper_case</li>
+			<li>select lower('india') as lower_case </li>
+			<li>select charracter_length('india') as total_len  </li>
+			<li>select character_length(column_name) as studentsName_length from table_name ;</li>
+			<li>select column_name , character_length(column_name) as provideAcolumnName from table_name; </li>
+			<li>select concat("String_1","  " ," string_2", .....) as merged;</li>
+			<li>select column_1 , column_2 concat(column_1 ," ",column_2) as provide_column_name from table_name;</li>
+			<li>select reverse('someText')</li>
+			<li>select replace("String " , "replace word" , "with another word");
+			 select replace("Orange is a vegetable" , "vegetable" , "fruit");  </li>
+			 <li>select ltrim("  bangladesh   ") select rtrim </li>
+			 <li>select position ("fruit" in "Orange is a fruit") as name;</li>
+		</ul>
+		<h1>###################### GROUP BY & HAVING  ########################</h1>
+		<ul>
+			<li>select column_name1, column_name2 , column_name3 from table_name where condition Group By column_name1, column_name2....; (it can never have the same row) </li>
+			<li>The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions </li>
+			<li>select col_name1, avg(col_name2) as provide_column_name from table_name group by col_name1 </li>
+			<li> select dept , avg(salary) as avg_salary from employees group by dept having avg(salary)>1000</li>
+			<li>select city , sum(salary) as total from table_name group by city having sum(salary)>2000</li>
+		</ul>
+		<h1> ###################### JOINS IN SQL   ######################## </h1>
+		<ul>
+			<li>  </li>
+		</ul>
+	</body>
+</html>
+
+
+      <!--   <ul>
+			<li></li>
+		</ul> -->
